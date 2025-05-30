@@ -1,0 +1,156 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { height: 100%; font-family: 'Manrope', sans-serif; overflow: hidden; }
+
+.weather-window {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background-animation {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top right, #d0add6, #710370);
+  transition: background 2s ease;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.weather-container {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(4px);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.location { font-weight: 600; color: #fffafa; }
+.menu     { font-size: 1.5rem; color: #333; }
+
+.hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.hero-temp {
+  font-size: 4rem;
+  color: #222;
+  font-weight: 700;
+}
+#heroDesc, #heroTime {
+  font-size: 1rem;
+  color: #fffafa;
+}
+
+.search-bar {
+  display: flex;
+  margin: 1rem 0;
+}
+.search-bar input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+}
+.search-bar button {
+  padding: 0 1rem;
+  border: none;
+  background: #070250;
+  color: #fff;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+
+.today-data, .today-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.data-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+.today-values div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.hourly h2 { font-size: 1.1rem; color: #333; margin-bottom: .5rem; }
+.hourly-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: .5rem;
+}
+.hour-block {
+  flex: 0 0 60px;
+  text-align: center;
+  margin-right: .5rem;
+  padding: .5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.hour-block p { font-size: .9rem; color: #333; margin: .2rem 0; }
+
+.daily h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.day-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.day-label {
+  font-weight: 600;
+}
+.day-info {
+  font-size: 0.95rem;
+}
+
+/* ✅ New styles for API content */
+.api-content {
+  margin-top: 2rem;
+}
+#postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post-block {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.post-block h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+.post-block p {
+  font-size: 0.95rem;
+  color: #444;
+}

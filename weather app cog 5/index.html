@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immersive Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="weather-window">
+    <div id="background-animation" style="background: url('image/weather.png'); background-size: cover;"></div>
+
+    <div class="weather-container">
+      <header>
+        <div class="location">📍 <span id="heroLoc">--</span></div>
+        <div class="menu">☰</div>
+      </header>
+
+      <section class="hero">
+        <h1 class="hero-temp" id="heroTemp">--°C</h1>
+        <p id="heroDesc">--</p>
+        <p id="heroTime">--:--</p>
+      </section>
+
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search city..." />
+        <button onclick="getWeather()">🔍</button>
+      </div>
+
+      <section class="today-data">
+        <div class="data-label">Temperature</div>
+        <div class="data-label">Humidity</div>
+        <div class="data-label">Wind</div>
+        <div class="data-label">Country</div>
+      </section>
+      <section class="today-values">
+        <div id="todayTemp">--</div>
+        <div id="todayHumidity">--</div>
+        <div id="todayWind">--</div>
+        <div id="todayCountry">--</div>
+      </section>
+
+      <section class="hourly">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-scroll" id="hourlyScroll"></div>
+      </section>
+
+      <section class="daily">
+        <h2>Next 7 Days</h2>
+        <div class="daily-list" id="dailyList"></div>
+      </section>
+      
+      <section class="api-content">
+        <h2>Sample Posts</h2>
+        <div id="postsList"></div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
