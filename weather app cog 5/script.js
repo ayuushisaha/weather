@@ -1,4 +1,4 @@
-const apiKey = '2a9a0dfbd7d29258d2a0fd0166fa7384';
+const apiKey = 'api_key';
 
 const countries = {
   IN: "India", US: "United States", GB: "United Kingdom", FR: "France", DE: "Germany",
